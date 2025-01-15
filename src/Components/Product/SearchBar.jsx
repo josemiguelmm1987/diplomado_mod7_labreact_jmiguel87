@@ -1,11 +1,30 @@
-const SearchBar = () => {
+const SearchBar = ({
+  filterText,
+  inStockOnly,
+  onFilterTextChange,
+  onInStockOnlyChange,
+}) => {
   return (
-    <form>
-      <input type="text" placeholder="Buscar..." />
-      <label>
-        <input type="checkbox" /> Mostrar solo productos en stock
-      </label>
-    </form>
+    <>
+      {/* <p>Inicio Componente para 2. SearchBar</p> */}
+      <form>
+        <input
+          type="text"
+          placeholder="Buscar..."
+          value={filterText}
+          onChange={(e) => onFilterTextChange(e.target.value)}
+        ></input>
+        <label>
+          <input
+            type="checkbox"
+            checked={inStockOnly}
+            onChange={(e) => onInStockOnlyChange(e.target.checked)}
+          ></input>{" "}
+          Solo productos en Stock
+        </label>
+      </form>
+      {/* <p>Fin Componente para 2. SearchBar</p> */}
+    </>
   );
 };
 

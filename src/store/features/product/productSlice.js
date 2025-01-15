@@ -2,6 +2,7 @@ import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
   initialValue: 10,
+  otroValor: 87,
   dataProduct: [
     {category: "Frutas", price: "$1", stocked: true, name: "Manzana"},
     {category: "Frutas", price: "$1", stocked: true, name: "Fruta del dragón"},
@@ -14,7 +15,7 @@ const initialState = {
 }
 
 export const productSlice = createSlice({
-  name: 'counter',
+  name: 'dataProduct',
   initialState,
   reducers: {
     setInitialValue: (state, payload) => {
@@ -23,6 +24,6 @@ export const productSlice = createSlice({
   },
 })
 
-export const { setInitialValue } = productSlice.actions
+export const { setInitialValue, setFilterText, toggleInStockOnly } = productSlice.actions
 
 export default productSlice.reducer

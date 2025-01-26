@@ -11,7 +11,7 @@ import App from "./App.jsx";
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <Provider store={store}>
-      <BrowserRouter>
+      <BrowserRouter basename="/diplomado_mod7_labreact_jmiguel87/"> 
         <App />
       </BrowserRouter>
     </Provider>

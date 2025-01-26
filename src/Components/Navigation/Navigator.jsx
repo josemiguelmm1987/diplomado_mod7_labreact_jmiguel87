@@ -14,6 +14,9 @@ const Navigator = () => {
       <Link to="/counter" className="nav-link">
         Counter
       </Link>
+      <Link to="/login" className="nav-link">
+        Login
+      </Link>
       <Link to="/about" className="nav-link">
         About
       </Link>
